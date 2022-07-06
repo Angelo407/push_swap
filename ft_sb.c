@@ -7,8 +7,8 @@
 int *swap_b(int argc, int *b)
 {
     int temp;
-    b = 5, 7, 8, 9;
-
+//    b = 5, 7, 8, 9;
+    
 /*
 //    if ((argc - 1) < 1)
 //    if (b[argc - 1] < b[1])
