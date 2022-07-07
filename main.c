@@ -49,25 +49,17 @@ int main(int argc, char **argv)
 //    swap_a(argc - 1, a);
 //    swap_b(argc - 1, b);
 
+
+/*
+	char	dst[] = "EFGHI";
+	char	src[] = "1234";
+	printf("%s\n", (char *)ft_memmove(dst, src, 2));
+*/
+
     push_b(&a, &b);
 
 
     return (0);
 }
 
-/*
-    t_array array;
-
-    array.a = malloc(sizeof(int));
-
-    array.a[0] = 5;
-    array.a[1] = 3;
-    array.a[2] = 2;
-    array.a[3] = 8;
-
-    printf("%d\n", array.a[0]);
-*/
-
-
-
-//gcc main.c ft_sa.c ft_sb.c ft_atoi.c ft_pb.c ft_check_empty_array.c ft_size_array_int.c -w
+//gcc main.c ft_sa.c ft_sb.c ft_atoi.c ft_pb.c ft_check_empty_array.c ft_size_array_int.c ft_memmove.c ft_itoa.c ft_strlen.c -w

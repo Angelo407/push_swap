@@ -16,17 +16,15 @@ int     ft_atoi(const char *str);
 void	*ft_calloc(size_t element_number, size_t element_size);
 int     ft_size_array_int(int *array);
 int     *numbers_array(int argc, char **argv);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+char	*ft_itoa(int n);
+size_t	ft_strlen(const char *str);
 int     *swap_a(int argc, int *a);
 int     *swap_b(int argc, int *b);
 int     push_b(t_array *a, t_array *b);
 int     ft_check_empty_array(t_array *array);
 int     ft_check_empty_array_a(t_array *a);
 int     ft_check_empty_array_b(t_array *b);
-
-
-
-
-
 
 
 #endif
