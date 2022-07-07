@@ -34,11 +34,11 @@ int main(int argc, char **argv)
     b.b = malloc(sizeof(int));
     if (!b.b)
         return (0);
-    a.a[0] = 6;
+    a.a[0] = 5;
     a.a[1] = 3;
     a.a[2] = 2;
     a.a[3] = 8;
-    a.a[4] = 7;
+    a.a[4] = 9;
 
 
     numbers_array(argc, argv);
