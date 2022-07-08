@@ -7,24 +7,27 @@
 
 typedef struct array {
     int *a;
+    int size_a;
     int *b;
+    int size_b;
     int *array;
 }   t_array;
 
 
 int     ft_atoi(const char *str);
-void	*ft_calloc(size_t element_number, size_t element_size);
-int     ft_size_array_int(int *array);
-int     *numbers_array(int argc, char **argv);
-void	*ft_memmove(void *dst, const void *src, size_t len);
-char	*ft_itoa(int n);
-size_t	ft_strlen(const char *str);
-int     *swap_a(int argc, int *a);
-int     *swap_b(int argc, int *b);
-int     push_b(t_array *a, t_array *b);
-int     ft_check_empty_array(t_array *array);
-int     ft_check_empty_array_a(t_array *a);
-int     ft_check_empty_array_b(t_array *b);
+//int     ft_size_array_int(int *array);
+//int     *array_atoi(int argc, char **argv);
+//int     *swap_a(int argc, int *a);
+//int     *swap_b(int argc, int *b);
+
+//int     push_b(t_array *a, t_array *b);
+int     push_b(t_array *array);
+//int     push_b1(t_array *a);
+int     push_b1(void);
+int     new_ptr_b(int *b_temp);
+
+
+//int push_b(t_array *a, t_array size_array_a);
 
 
 #endif

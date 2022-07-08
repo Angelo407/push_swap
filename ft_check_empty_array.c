@@ -1,6 +1,8 @@
-# include "push_swap.h"
+//# include "push_swap.h"
 
+//  NE PEUT PAS FONCTIONNER !!!
 
+/*
 int ft_check_empty_array_a(t_array *a)
 {
     if (*a->a == NULL)
@@ -30,3 +32,4 @@ int ft_check_empty_array(t_array *array)
     }
     return (1);
 }
+*/

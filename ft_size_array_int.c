@@ -1,5 +1,8 @@
-# include "push_swap.h"
+//# include "push_swap.h"
 
+//  NE PEUT PAS FONCTIONNER !!!
+
+/*
 int ft_size_array_int(int *array)
 {
     int i;
@@ -9,6 +12,7 @@ int ft_size_array_int(int *array)
         i++;
     return (i);
 }
+*/
 
 /*
 int main()
