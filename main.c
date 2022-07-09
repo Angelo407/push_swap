@@ -36,28 +36,20 @@ int main(int argc, char **argv)
     j = 0;
     array->size_a = argc - 1;
     while (j < array->size_a)
-    {
         int_array[j++] = ft_atoi(argv[i++]); // ou utiliser la fonction array_atoi
-        if (j == array->size_a)
-            int_array[j] = int_array[array->size_a]; 
-//      BUT : SUPPRIMER LES 0, donc pk fonctionne pas ? Ex : printf("%d\n", int_array[1000]); RES = 0 ???
-//      alors que : taille_tableau.size_a = argc - 1 !!!?
-    }
-//  printf("j = %d\n", j);
-//  printf("taille_tableau.size_a = %d\n", taille_tableau.size_a);
+    
     printf("MAIN RESULTAT : int_array[idx] = %d %d %d %d %d\n", int_array[0], int_array[1], int_array[2], int_array[3], int_array[4]);
 
-
-//  J'AI ESSAYER DE METTRE DANS UNE AUTRE VARIABLE MAIS LE RESULTAT EST IDENTIQUE !!!
     i = 0;
     j = 0;
     while (j < array->size_a)
     { 
         array->a[i] = int_array[j];
-        printf("MAIN DS WHILE : array->a[i] = %d | int_array[j] = %d\n", array->a[i], int_array[j]);
+//        printf("MAIN DS WHILE : array->a[i] = %d | int_array[j] = %d\n", array->a[i], int_array[j]);
         i++;
         j++;
     }
+    printf("MAIN : array->size_a = %d\n", array->size_a);
     printf("MAIN RESULTAT : array->a[idx] = %d %d %d %d %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4]);
 
 
