@@ -22,6 +22,7 @@ int     ft_atoi(const char *str);
 
 //int     push_b(t_array *a, t_array *b);
 int     push_b(t_array *array);
+int     push_a(t_array *array);
 
 //int     push_b1(t_array *a);
 int     push_b1(void);

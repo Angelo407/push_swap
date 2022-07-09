@@ -7,7 +7,7 @@ int main(int argc, char **argv)
     int     *int_array;
     int     i;
     int     j;
-  
+
     array = malloc(sizeof(t_array));
     if (!array)
     {
@@ -35,38 +35,27 @@ int main(int argc, char **argv)
     i = 1;
     j = 0;
     array->size_a = argc - 1;
+    array->size_b = 0;
     while (j < array->size_a)
-        int_array[j++] = ft_atoi(argv[i++]); // ou utiliser la fonction array_atoi
+        int_array[j++] = ft_atoi(argv[i++]);
     
-    printf("MAIN RESULTAT : int_array[idx] = %d %d %d %d %d\n", int_array[0], int_array[1], int_array[2], int_array[3], int_array[4]);
+//    printf("MAIN RESULTAT : int_array[idx] = %d %d %d %d %d\n", int_array[0], int_array[1], int_array[2], int_array[3], int_array[4]);
 
     i = 0;
     j = 0;
     while (j < array->size_a)
     { 
         array->a[i] = int_array[j];
-//        printf("MAIN DS WHILE : array->a[i] = %d | int_array[j] = %d\n", array->a[i], int_array[j]);
+        printf("MAIN DS WHILE : array->a[i] = %d | int_array[j] = %d\n", array->a[i], int_array[j]);
         i++;
         j++;
     }
-    printf("MAIN : array->size_a = %d\n", array->size_a);
-    printf("MAIN RESULTAT : array->a[idx] = %d %d %d %d %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4]);
 
+    printf("MAIN RESULTAT : array->a[idx] = %d %d %d %d %d %d | array->size_a = %d | array->size_b = %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4], array->a[5], array->size_a, array->size_b);
+    printf("MAIN : array->b[idx] = %d %d\n", array->b[0], array->b[1]);
 
-//    swap_a(argc - 1, a);
-//    swap_b(argc - 1, b);
-//    push_b(&tab1);
-//    push_b(&a);
-//    push_b(&array->a);
-//    push_b(&a, &b);
-    push_b(array);
-//    push_b(&a, size_array_a);
+//    push_b(array);
+    push_a(array);
+
     return (0);
 }
-
-/*
-    b.b[0] = 4;
-    b.b[1] = 9;
-    b.b[2] = 2;
-    b.b[3] = 5;
-*/
