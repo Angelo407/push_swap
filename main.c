@@ -36,6 +36,14 @@ int main(int argc, char **argv)
     j = 0;
     array->size_a = argc - 1;
     array->size_b = 0;
+
+    array->b[0] = 8;
+    array->b[1] = 9;
+    array->b[2] = 2;
+    array->b[3] = 5;
+    array->b[4] = 7;
+    array->size_b = 5;
+
     while (j < array->size_a)
         int_array[j++] = ft_atoi(argv[i++]);
     
@@ -46,16 +54,32 @@ int main(int argc, char **argv)
     while (j < array->size_a)
     { 
         array->a[i] = int_array[j];
-        printf("MAIN DS WHILE : array->a[i] = %d | int_array[j] = %d\n", array->a[i], int_array[j]);
+//        printf("MAIN (ds while) : array->a[i] = %d | int_array[j] = %d\n", array->a[i], int_array[j]);
         i++;
         j++;
     }
+    // printf("MAIN (avant opérations) : array->a[idx] = %d %d %d %d %d %d | array->size_a = %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4], array->a[5], array->size_a);
+//    printf("MAIN : array->a[idx] = %d %d %d %d %d %d | array->size_a = %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4], array->a[5], array->size_a);
+//    printf("MAIN : array->b[idx] = %d %d %d %d %d %d | array->size_b = %d\n", array->b[0], array->b[1], array->b[2], array->b[3], array->b[4], array->b[5], array->size_b);
 
-    printf("MAIN RESULTAT : array->a[idx] = %d %d %d %d %d %d | array->size_a = %d | array->size_b = %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4], array->a[5], array->size_a, array->size_b);
-    printf("MAIN : array->b[idx] = %d %d\n", array->b[0], array->b[1]);
+    // push_b(array);
+    // push_a(array);
 
-//    push_b(array);
     push_a(array);
+    printf("RESULTAT apres push_a : array->a[idx] = %d %d %d %d %d %d | array->size_a = %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4], array->a[5], array->size_a);
+    printf("RESULTAT apres push_a : array->b[idx] = %d %d %d %d %d %d | array->size_b = %d\n", array->b[0], array->b[1], array->b[2], array->b[3], array->b[4], array->b[5], array->size_b);
+    printf("\n");
+    push_b(array);
+    printf("RESULTAT apres push_b : array->a[idx] = %d %d %d %d %d %d | array->size_a = %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4], array->a[5], array->size_a);
+    printf("RESULTAT apres push_b : array->b[idx] = %d %d %d %d %d %d | array->size_b = %d\n", array->b[0], array->b[1], array->b[2], array->b[3], array->b[4], array->b[5], array->size_b);
+
+
+    printf("\n");
+    printf("RESULTAT : array->a[idx] = %d %d %d %d %d %d | array->size_a = %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4], array->a[5], array->size_a);
+    printf("RESULTAT : array->b[idx] = %d %d %d %d %d %d | array->size_b = %d\n", array->b[0], array->b[1], array->b[2], array->b[3], array->b[4], array->b[5], array->size_b);
+
 
     return (0);
 }
+
+//    printf("Main.NTM1 : array->a[0] = %d\n", array->a[0]);
