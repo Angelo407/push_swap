@@ -1,30 +1,27 @@
 # include "push_swap.h"
 
-/*
-    - Je mets [argc - 1] comme taille du tableau de b car *b = la même taille que *a
-*/
-
-int *swap_b(int argc, int *b)
+int swap_b(t_array *array)
 {
-    int temp;
-//    b = 5, 7, 8, 9;
-    
-/*
-//    if ((argc - 1) < 1)
-//    if (b[argc - 1] < b[1])
+    int idxfirst;
+    int idxlast;
+    int i;
 
-    if ()
+    if (array->size_b <= 1)
     {
-        write(1, "*b contient moins de 2 valeurs !\n", 33);
+        printf("Le tableau b contient moins de 2 éléments !\n");
         return (0);
     }
-*/
-//    printf("%d\n", *b);
-
-    temp = b[0];
-    b[0] = b[1];
-    b[1] = temp;
+    idxfirst = array->b[0];
+    idxlast = array->b[array->size_b - 1];
+    i = -1;
+    while (i < array->size_b)
+    {
+        if (i == 1)
+            array->b[0] = idxlast;
+        if (i == array->size_b - 1)
+            array->b[array->size_b - 1] = idxfirst;
+        i++;
+    } 
     write(1, "sb\n", 3);
-
-    return (b);
+    return (1);
 }

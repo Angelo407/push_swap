@@ -9,8 +9,6 @@ static int  new_ptr_b(int *b_temp, t_array *array)
 
     i = 1;
     j = 0;
-    printf("??? FT_NEW_PTR_A : b_temp[idx] = %d %d %d %d %d %d | array->size_a = %d\n", b_temp[0], b_temp[1], b_temp[2], b_temp[3], b_temp[4], b_temp[5], array->size_a);
-    // Le printf devrait donner 8 à l'index 0 !!!
     while (i < array->size_b + 1)
     {
         b_temp[i] = array->b[j];
@@ -19,6 +17,7 @@ static int  new_ptr_b(int *b_temp, t_array *array)
         j++;
     }
 //    printf("FT_NEW_PTR_A : a_temp[idx] = %d %d %d %d %d %d | array->size_a = %d\n", a_temp[0], a_temp[1], a_temp[2], a_temp[3], a_temp[4], a_temp[5], array->size_a);
+//    array->b = NULL;
     array->b = b_temp;
     array->size_b = array->size_b + 1;
     printf("FT_NEW_PTR_A : array->b[idx] = %d %d %d %d %d %d | array->size_b = %d\n", array->b[0], array->b[1], array->b[2], array->b[3], array->b[4], array->b[5], array->size_b);
@@ -30,6 +29,7 @@ int push_b(t_array *array)
 {
     int     i;
     int     j;
+//    int     *a_temp; 
     int     *b_temp;
 
     if (array->size_a == 0)
@@ -37,15 +37,19 @@ int push_b(t_array *array)
         printf("Le tableau a est vide !\n");
         return (0);
     }
+    // a_temp = malloc(sizeof(int));
+    // if (!a_temp)
+    // {
+    //     printf("Le malloc de a_temp a échoué !\n");
+    //     return (0);
+    // }
     b_temp = malloc(sizeof(int));
     if (!b_temp)
     {
         printf("Le malloc de b_temp a échoué !\n");
         return (0);
     }
-
     b_temp[0] = array->a[0];
-    printf("ft_pb.c : b_temp[0] = %d | array->size_a = %d\n", b_temp[0], array->size_a);
 
     i = 0;
     j = 1;
@@ -66,16 +70,3 @@ int push_b(t_array *array)
     write(1, "pb\n", 3);
     return (0);
 }
-
-/*
-static int  new_ptr_b(int *b_temp, t_array *array)
-{
-    array->size_b = array->size_b + 1;
-    b_temp[array->size_b] = array->b[array->size_b];
-
-    printf("ft_new_ptr_b : array->size_b = %d\n", array->size_b);
-    printf("ft_new_ptr_b : b_temp[idx] = %d %d %d %d %d %d\n", b_temp[0], b_temp[1], b_temp[2], b_temp[3], b_temp[4], b_temp[5]); // en ajoutant un 0 ça fait un segfault
-
-    return (0);
-}
-*/
