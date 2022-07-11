@@ -64,10 +64,12 @@ int main(int argc, char **argv)
 //    printf("MAIN : array->a[idx] = %d %d %d %d %d %d | array->size_a = %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4], array->a[5], array->size_a);
 //    printf("MAIN : array->b[idx] = %d %d %d %d %d %d | array->size_b = %d\n", array->b[0], array->b[1], array->b[2], array->b[3], array->b[4], array->b[5], array->size_b);
 
-    swap_a(array);
-    swap_a(array);
-    swap_b(array);
-    swap_a(array);
+    // swap_a(array);
+    // swap_a(array);
+    // swap_b(array);
+    // swap_a(array);
+    ss(array);
+    ss(array);
 
     // push_b(array);
     // printf("MAIN apres push_b : array->a[idx] = %d %d %d %d %d %d %d | array->size_a = %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4], array->a[5], array->a[6], array->size_a);
