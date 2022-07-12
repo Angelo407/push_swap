@@ -21,9 +21,8 @@ int     swap_b(t_array *array);
 int     ss(t_array *array);
 int     push_b(t_array *array);
 int     push_a(t_array *array);
-
-//int     push_b1(t_array *a);
-//int     push_b1(void);
+int     rotate_a(t_array *array);
+int     rotate_b(t_array *array);
 
 
 #endif
