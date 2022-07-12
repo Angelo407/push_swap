@@ -10,6 +10,7 @@ typedef struct array {
     int size_a;
     int *b;
     int size_b;
+    int size_tab_max;
     int *array;
 }   t_array;
 
@@ -23,6 +24,11 @@ int     push_b(t_array *array);
 int     push_a(t_array *array);
 int     rotate_a(t_array *array);
 int     rotate_b(t_array *array);
+int     reverse_rotate_a(t_array *array);
+int     reverse_rotate_b(t_array *array);
+
+void  print_rrb(void);
+
 
 
 #endif

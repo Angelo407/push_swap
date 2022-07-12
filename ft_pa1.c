@@ -28,6 +28,7 @@ static int  new_ptr_a(int *a_temp, t_array *array)
 
 int push_a(t_array *array)
 {
+//  DEFINIR QUE b = max argc - 1;
     int     i;
     int     j;
     int     *a_temp;
