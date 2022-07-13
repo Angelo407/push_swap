@@ -5,5 +5,5 @@ int ss(t_array *array)
 {
     swap_a(array);
     swap_b(array);
-    return (1);
+    return (0);
 }

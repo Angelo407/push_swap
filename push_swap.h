@@ -46,6 +46,8 @@ void    *check_malloc_b_temp(t_array *array, t_garbages *garbages);
 
 
 
+
+
 #endif
 
 

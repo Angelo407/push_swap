@@ -1,30 +1,6 @@
 # include "push_swap.h"
 
-// static  void *check_malloc_a_temp(t_array *array, t_garbages *garbages)
-// {
-//     garbages->a_temp = malloc(sizeof(int) * array->size_a);
-//     if (!garbages->a_temp)
-//     {
-//         printf("Le malloc garbages->a_temp a échoué !\n");
-//         // exit (EXIT_SUCCESS);
-//         return (0);
-//     }
-//     return (garbages->a_temp);
-// }
-
-// static  void *check_malloc_b_temp(t_array *array, t_garbages *garbages)
-// {
-//     garbages->b_temp = malloc(sizeof(int) * array->size_b);
-//     if (!garbages->b_temp)
-//     {
-//         printf("Le malloc garbages->b_temp a échoué !\n");
-//         // exit (EXIT_SUCCESS);
-//         return (0);
-//     }
-//     return (garbages->b_temp);
-// }
-
-int push_b(t_array *array)
+static int  push_b_intermediate(t_array *array)
 {
     t_garbages  garbages;
 
@@ -50,6 +26,12 @@ int push_b(t_array *array)
             garbages.b_temp[garbages.i++] = array->b[garbages.j++];
     }
     array->b = garbages.b_temp;
-    write(1, "pb\n", 3);
+    return (0);
+}
+
+int push_b(t_array *array)
+{
+    if (push_b_intermediate(array) == 0)
+       write(1, "pb\n", 3);
     return (0);
 }
