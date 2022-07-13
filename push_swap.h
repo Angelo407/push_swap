@@ -14,9 +14,19 @@ typedef struct array {
     int *array;
 }   t_array;
 
+typedef struct garbages {
+    int *a_temp;
+    int *b_temp;
+    int i;
+    int j;
+    int k[1];
+}   t_garbages;
+
 
 int     ft_atoi(const char *str);
 //int     *array_atoi(int argc, char **argv);
+int     ft_check_empty_array_a(t_array *array);
+int     ft_check_empty_array_b(t_array *array);
 int     swap_a(t_array *array);
 int     swap_b(t_array *array);
 int     ss(t_array *array);
@@ -28,6 +38,11 @@ int     reverse_rotate_a(t_array *array);
 int     reverse_rotate_b(t_array *array);
 
 void  print_rrb(void);
+int     test(t_array *array, t_garbages *garbages);
+void    *check_malloc_a_temp(t_array *array, t_garbages *garbages);
+void    *check_malloc_b_temp(t_array *array, t_garbages *garbages);
+
+
 
 
 
