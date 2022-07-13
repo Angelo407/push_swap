@@ -33,6 +33,8 @@ int push_b(t_array *array)
         a_temp[i++] = array->a[j++];
     array->size_a = array->size_a - 1;
     array->a = a_temp;
+
+// MNT ON S'OCCUPE DE TABLEAU B
     array->size_b = array->size_b + 1;
     if (array->size_b == 1)
         b_temp[0] = k[0];
@@ -45,6 +47,9 @@ int push_b(t_array *array)
             b_temp[i++] = array->b[j++];
     }
     array->b = b_temp;
+
+    // printf("a_temp[idx] = %d %d %d %d %d %d %d | array->size_a = %d\n", a_temp[0], a_temp[1], a_temp[2], a_temp[3], a_temp[4], a_temp[5], a_temp[6], array->size_a);
+    printf("b_temp[idx] = %d %d %d %d %d %d %d | array->size_b = %d\n", b_temp[0], b_temp[1], b_temp[2], b_temp[3], b_temp[4], b_temp[5], b_temp[6], array->size_b);
     write(1, "pb\n", 3);
     return (0);
 }
