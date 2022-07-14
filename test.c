@@ -2,7 +2,6 @@
 
 int test(t_array *array, t_garbages *garbages)
 {
-
     // array->b[0] = 9;
     // array->b[1] = 3;
     // array->b[2] = 4;
@@ -28,12 +27,12 @@ int test(t_array *array, t_garbages *garbages)
     //     i++;
     //     write(1, "\n", 1);
     // }
-    // push_b(array);
-    // push_b(array);
-    // push_b(array);
-    // push_b(array);
-    // push_b(array);
-   // push_b(array);
+    // push_b(array, garbages);
+    // push_b(array, garbages);
+    // push_b(array, garbages);
+    // push_b(array, garbages);
+    // push_b(array, garbages);
+    // push_b(array, garbages);
 //------------------------------------------------------------------------------
     // push_a(array);
     // push_a(array);
@@ -63,8 +62,38 @@ int test(t_array *array, t_garbages *garbages)
     // rr(array, garbages);
 
 //------------------------------------------------------------------------------    
-    // reverse_rotate_a(array);
-    // reverse_rotate_a(array);
+    // reverse_rotate_a(array, garbages);
+    // reverse_rotate_a(array, garbages);
+    // reverse_rotate_a(array, garbages);
+    // reverse_rotate_a(array, garbages);
+    // reverse_rotate_a(array, garbages);
+    // reverse_rotate_a(array, garbages);
+    
+    // reverse_rotate_b(array, garbages);
+    // reverse_rotate_b(array, garbages);
+    // reverse_rotate_b(array, garbages);
+    // reverse_rotate_b(array, garbages);
+    // reverse_rotate_b(array, garbages);
+
+    // rrr(array, garbages);
+    // rrr(array, garbages);
+    // rrr(array, garbages);
+    // rrr(array, garbages);
+
+
+    push_b(array, garbages);
+    push_b(array, garbages);
+    push_b(array, garbages);
+    swap_a(array);
+    swap_b(array);
+    ss(array);
+    rotate_a(array, garbages);
+    rotate_b(array, garbages);
+    rr(array, garbages);
+    reverse_rotate_a(array, garbages);
+    reverse_rotate_b(array, garbages);
+    rrr(array, garbages);
+    push_a(array, garbages);
 
     return (0);
 }

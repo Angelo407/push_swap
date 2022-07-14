@@ -1,25 +1,21 @@
 # include "push_swap.h"
 
-int reverse_rotate_a(t_array *array)
+int reverse_rotate_a_intermediate(t_array *array, t_garbages *rrai)
 {
-    int i;
-    int j;
-    int *a_temp;
-    int k[1];
+    check_malloc_a_temp(array, rrai);
+    rrai->i = 1;
+    rrai->j = 0;
+    rrai->k[0] = array->a[array->size_a - 1];
+    while (rrai->i < array->size_a)
+        rrai->a_temp[rrai->i++] = array->a[rrai->j++];
+    rrai->a_temp[0] = rrai->k[0];
+    array->a = rrai->a_temp;
+    return (1);
+}
 
-    a_temp = malloc(sizeof(int) * array->size_a);
-    if (!a_temp)
-    {
-        printf("Le malloc de a_temp a échoué !\n");
-        return (0);
-    }
-    i = 1;
-    j = 0;
-    k[0] = array->a[array->size_a - 1];
-    while (i < array->size_a)
-        a_temp[i++] = array->a[j++];
-    a_temp[0] = k[0];
-    array->a = a_temp;
-    write(1, "rra\n", 4);
+int reverse_rotate_a(t_array *array, t_garbages *rrai)
+{
+    if (reverse_rotate_a_intermediate(array, rrai) == 1)
+       write(1, "rra\n", 4);
     return (0);
 }
