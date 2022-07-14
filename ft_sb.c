@@ -1,6 +1,6 @@
 # include "push_swap.h"
 
-int swap_b(t_array *array)
+int swap_b_intermediate(t_array *array)
 {
     int idxfirst;
     int idxlast;
@@ -22,6 +22,12 @@ int swap_b(t_array *array)
             array->b[array->size_b - 1] = idxfirst;
         i++;
     } 
-    write(1, "sb\n", 3);
     return (1);
+}
+
+int swap_b(t_array *array)
+{
+    if (swap_b_intermediate(array) == 1)
+       write(1, "sb\n", 3);
+    return (0);
 }

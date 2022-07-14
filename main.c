@@ -38,12 +38,8 @@ int main(int argc, char **argv)
     j = 0;
     array->size_a = argc - 1;
     array->size_b = 0;
-
-
-
     while (j < array->size_a)
         int_array[j++] = ft_atoi(argv[i++]);
-    
     i = 0;
     j = 0;
     while (j < array->size_a)
