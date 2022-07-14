@@ -24,7 +24,6 @@ typedef struct garbages {
     int k[1];
 }   t_garbages;
 
-
 int     ft_atoi(const char *str);
 //int     *array_atoi(int argc, char **argv);
 int     ft_check_empty_array_a(t_array *array);
