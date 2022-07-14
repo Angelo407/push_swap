@@ -19,7 +19,6 @@ int test(t_array *array, t_garbages *garbages)
     // swap_b(array);
     // ss(array);
     // ss(array);
-
 //------------------------------------------------------------------------------
     // i = 1;
     // push_b(array);
@@ -42,14 +41,28 @@ int test(t_array *array, t_garbages *garbages)
 
     // printf("apres push_a : array->a[idx] = %d %d %d %d %d %d %d %d %d | array->size_a = %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4], array->a[5], array->a[6], array->a[7], array->a[8], array->size_a);
     // printf("apres push_a : array->b[idx] = %d %d %d %d %d %d %d %d %d | array->size_b = %d\n", array->b[0], array->b[1], array->b[2], array->b[3], array->b[4], array->b[5], array->b[6], array->b[7], array->b[8], array->size_b);
-    // printf("\n");
-
 //------------------------------------------------------------------------------
-
-
+    // rotate_a(array, garbages);
+    // rotate_a(array, garbages);
+    // rotate_a(array, garbages);
+    // rotate_a(array, garbages);
     // rotate_a(array);
+    // rotate_a(array);
+    // rotate_a(array);
+
+    // rotate_b(array, garbages);
+    // rotate_b(array, garbages);
+    // rotate_b(array, garbages);
+    // rotate_b(array, garbages);
     // rotate_b(array);
-    
+    // rotate_b(array);
+
+    // rr(array, garbages);
+    // rr(array, garbages);
+    // rr(array, garbages);
+    // rr(array, garbages);
+
+//------------------------------------------------------------------------------    
     // reverse_rotate_a(array);
     // reverse_rotate_a(array);
 

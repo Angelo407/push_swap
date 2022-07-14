@@ -26,12 +26,12 @@ static int  push_b_intermediate(t_array *array)
             garbages.b_temp[garbages.i++] = array->b[garbages.j++];
     }
     array->b = garbages.b_temp;
-    return (0);
+    return (1);
 }
 
 int push_b(t_array *array)
 {
-    if (push_b_intermediate(array) == 0)
+    if (push_b_intermediate(array) == 1)
        write(1, "pb\n", 3);
     return (0);
 }

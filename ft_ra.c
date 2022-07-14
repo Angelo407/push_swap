@@ -1,31 +1,27 @@
 # include "push_swap.h"
 
-int rotate_a(t_array *array)
+int rotate_a_intermediate(t_array *array, t_garbages *rai)
 {
-    int a_temp[array->size_a]; // pas possible, dixit Emmanuel
-    int i;
-    int j;
-    int *k;
+    check_malloc_a_temp(array, rai);
+    rai->i = 0;
+    rai->j = 1;
+    rai->k[0] = array->a[0];
+    while (rai->i < array->size_a + 1)
+    {
+        rai->a_temp[rai->i++] = array->a[rai->j++];
+        if (rai->i == array->size_a)
+            rai->a_temp[array->size_a - 1] = rai->k[0];
+    }
+       rai->i = 0;
+       rai->j = 0;
+        while (rai->i < array->size_a)
+            array->a[rai->i++] = rai->a_temp[rai->j++];
+    return (1);
+}
 
-    k = malloc(sizeof(int) * 1);
-    if (!k)
-    {
-        printf("Le malloc de k a échoué !\n");
-        return (0);
-    }
-    i = 0;
-    j = 1;
-    k[0] = array->a[0];
-    while (i < array->size_a + 1)
-    {
-        a_temp[i++] = array->a[j++];
-        if (i == array->size_a)
-            a_temp[array->size_a - 1] = k[0];
-    }
-       i = 0;
-       j = 0;
-        while (i < array->size_a)
-            array->a[i++] = a_temp[j++];
-    write(1, "ra\n", 3);
+int rotate_a(t_array *array, t_garbages *rai)
+{
+    if (rotate_a_intermediate(array, rai) == 1)
+       write(1, "ra\n", 3);
     return (0);
 }

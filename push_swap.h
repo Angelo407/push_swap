@@ -34,8 +34,12 @@ int     swap_b_intermediate(t_array *array);
 int     ss(t_array *array);
 int     push_b(t_array *array);
 int     push_a(t_array *array);
-int     rotate_a(t_array *array);
-int     rotate_b(t_array *array);
+int     rotate_a(t_array *array, t_garbages *garbages);
+int     rotate_a_intermediate(t_array *array, t_garbages *garbages);
+int     rotate_b(t_array *array, t_garbages *garbages);
+int     rotate_b_intermediate(t_array *array, t_garbages *garbages);
+int     rr(t_array *array, t_garbages *garbages);
+
 int     reverse_rotate_a(t_array *array);
 int     reverse_rotate_b(t_array *array);
 
