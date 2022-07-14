@@ -18,8 +18,8 @@ static int  push_b_intermediate(t_array *array, t_garbages *pbi)
     if (array->size_b > 1)
     {
         pbi->i = 1;
-       pbi->j = 0;
-       pbi->b_temp[0] = pbi->k[0];
+        pbi->j = 0;
+        pbi->b_temp[0] = pbi->k[0];
         while (pbi->i < array->size_b)
             pbi->b_temp[pbi->i++] = array->b[pbi->j++];
     }
