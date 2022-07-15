@@ -33,13 +33,9 @@ int main(int argc, char **argv)
     garbages.j = 0;
     while (garbages.j < array.size_a)
         array.a[garbages.i++] = array.int_array[garbages.j++];
-    // free(array.int_array); // inutile : pk ne provoque pas un leak sans le free ?
 
     // test(array, &garbages);
 
-    // printf("\nMAIN RESULTAT : array.a[idx] = %d %d %d %d %d %d %d %d %d | array.size_a = %d\n", array.a[0], array.a[1], array.a[2], array.a[3], array.a[4], array.a[5], array.a[6], array.a[7], array.a[8], array.size_a);
-    // printf("MAIN RESULTAT : array.b[idx] = %d %d %d %d %d %d %d %d %d | array.size_b = %d\n", array.b[0], array.b[1], array.b[2], array.b[3], array.b[4], array.b[5], array.b[6], array.b[7], array.b[8], array.size_b);
-    
     // push_a(&array, &garbages);
     push_b(&array, &garbages);
     push_b(&array, &garbages);
@@ -52,16 +48,11 @@ int main(int argc, char **argv)
     printf("\nMAIN RESULTAT : array.a[idx] = %d %d %d %d %d %d %d %d %d | array.size_a = %d\n", array.a[0], array.a[1], array.a[2], array.a[3], array.a[4], array.a[5], array.a[6], array.a[7], array.a[8], array.size_a);
     printf("MAIN RESULTAT : array.b[idx] = %d %d %d %d %d %d %d %d %d | array.size_b = %d\n", array.b[0], array.b[1], array.b[2], array.b[3], array.b[4], array.b[5], array.b[6], array.b[7], array.b[8], array.size_b);
 
-    // free(array->b);
-    // printf("MAIN RESULTAT : array->a[idx] = %d %d %d %d %d %d %d %d %d | array->size_a = %d\n", array->a[0], array->a[1], array->a[2], array->a[3], array->a[4], array->a[5], array->a[6], array->a[7], array->a[8], array->size_a);
-    // printf("MAIN RESULTAT : array->b[idx] = %d %d %d %d %d %d %d %d %d | array->size_b = %d\n", array->b[0], array->b[1], array->b[2], array->b[3], array->b[4], array->b[5], array->b[6], array->b[7], array->b[8], array->size_b);
-
-
-    while (1)
-    {
-        sleep(1);
-        printf("%d\n" , getpid());    
-    }
+    // while (1)
+    // {
+    //     sleep(1);
+    //     printf("%d\n" , getpid());    
+    // }
 
     // VOIR AVEC VALGRIND : PS DE LEAK AVEC LA COMMANDE LEAKS
     // free(array.int_array);
