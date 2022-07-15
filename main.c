@@ -41,6 +41,8 @@ int main(int argc, char **argv)
     push_b(&array, &garbages);
     push_b(&array, &garbages);
     push_b(&array, &garbages);
+// ATTENTION : SI JE REFAIS UN PUSH, IL FAIT UN SEGMENTATION FAULT !!! checker également cela pour ttes les autres fonctions qui pourrait être concernées !
+// Sinon push_b ok, il reste plus qu'à gérer les free dans push_a !
     // push_b(&array, &garbages);
     // push_b(&array, &garbages);
 

@@ -52,6 +52,8 @@ void    *check_malloc_a(t_array *array);
 void    *check_malloc_b(t_array *array);
 void    *check_malloc_a_temp(t_array *array, t_garbages *garbages);
 void    *check_malloc_b_temp(t_array *array, t_garbages *garbages);
+int     free_malloc_a_temp(t_array *array, t_garbages *garbages);
+int     free_malloc_b_temp(t_array *array, t_garbages *garbages);
 int     test(t_array *array, t_garbages *garbages);
 
 
