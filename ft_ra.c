@@ -2,6 +2,7 @@
 
 int rotate_a_intermediate(t_array *array, t_garbages *rai)
 {
+    ft_check_empty_array_a(array);
     check_malloc_a_temp(array, rai);
     rai->i = 0;
     rai->j = 1;
@@ -12,11 +13,10 @@ int rotate_a_intermediate(t_array *array, t_garbages *rai)
         if (rai->i == array->size_a)
             rai->a_temp[array->size_a - 1] = rai->k[0];
     }
-       rai->i = 0;
-       rai->j = 0;
-        while (rai->i < array->size_a)
-            array->a[rai->i++] = rai->a_temp[rai->j++];
-        free(rai->a_temp);
+    rai->i = 0;
+    while (rai->i < array->size_a)
+        array->a[rai->i++] = rai->a_temp[rai->i++];
+    free(rai->a_temp);
     return (1);
 }
 

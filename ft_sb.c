@@ -8,7 +8,7 @@ int swap_b_intermediate(t_array *array)
 
     if (array->size_b <= 1)
     {
-        printf("Le tableau b contient moins de 2 éléments !\n");
+        printf("Erreur\nLe tableau b contient moins de 2 éléments !\n");
         return (0);
     }
     idxfirst = array->b[0];

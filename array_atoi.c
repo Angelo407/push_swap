@@ -13,7 +13,7 @@ int *array_atoi(int argc, char **argv)
     int_array = malloc(sizeof(int) * (argc - 1));
     if (!int_array)
     {
-        printf("Le malloc de *int_array a échoué !\n");
+        printf("Erreur\nLe malloc du pointeur int_array a échoué !\n");
         return (0);
     }
     while (j < argc - 1)

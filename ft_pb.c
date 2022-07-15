@@ -1,6 +1,6 @@
 # include "push_swap.h"
 
-int  push_b_intermediate(t_array *array, t_garbages *pbi)
+static int  push_b_intermediate(t_array *array, t_garbages *pbi)
 {
     ft_check_empty_array_a(array);
     check_malloc_a_temp(array, pbi);
@@ -14,36 +14,47 @@ int  push_b_intermediate(t_array *array, t_garbages *pbi)
     array->a = pbi->a_temp;
     array->size_b = array->size_b + 1;
     if (array->size_b == 1)
-    {
         pbi->b_temp[0] = pbi->k[0];
-        // array->b = pbi->b_temp;
-        // printf("pbi->b_temp = %d %d | size_b = %d\n", pbi->b_temp[0], pbi->b_temp[1], array->size_b);
-        // free(pbi->b_temp[array->size_b]);
-        // printf("pbi->b_temp = %d %d | size_b = %d\n", pbi->b_temp[0], pbi->b_temp[1], array->size_b);
-
-    }
     if (array->size_b > 1)
     {
         pbi->i = 1;
         pbi->j = 0;
         pbi->b_temp[0] = pbi->k[0];
         while (pbi->i < array->size_b)
-        {
-            pbi->b_temp[pbi->i] = array->b[pbi->j];
-            pbi->i++;
-            pbi->j++;
-        }
+            pbi->b_temp[pbi->i++] = array->b[pbi->j++];
     }
     array->b = pbi->b_temp;
-//    printf("pbi->b_temp[pbi->i] = %d | array->b[pbi->j] = %d | size_b = %d\n", pbi->b_temp[pbi->i], array->b[pbi->j], array->size_b);
+    return (1);
+}
 
-
-    // free(array->b);
-    // free(pbi->b_temp);
-
-    write(1, "pb\n", 3);
+int push_b(t_array *array, t_garbages *pbi)
+{
+    if (push_b_intermediate(array, pbi) == 1)
+       write(1, "pb\n", 3);
     return (0);
 }
+
+
+// int rotate_a_intermediate(t_array *array, t_garbages *rai)
+// {
+//     ft_check_empty_array_a(array);
+//     check_malloc_a_temp(array, rai);
+//     rai->i = 0;
+//     rai->j = 1;
+//     rai->k[0] = array->a[0];
+//     while (rai->i < array->size_a + 1)
+//     {
+//         rai->a_temp[rai->i++] = array->a[rai->j++];
+//         if (rai->i == array->size_a)
+//             rai->a_temp[array->size_a - 1] = rai->k[0];
+//     }
+//     rai->i = 0;
+//     while (rai->i < array->size_a)
+//         array->a[rai->i++] = rai->a_temp[rai->i++];
+//     free(rai->a_temp);
+//     return (1);
+// }
+
 
 // int push_b(t_array *array, t_garbages *pbi)
 // {
@@ -58,7 +69,12 @@ int  push_b_intermediate(t_array *array, t_garbages *pbi)
 
 
 
-// static int  push_b_intermediate(t_array *array, t_garbages *pbi)
+
+
+
+
+
+// int  push_b_intermediate(t_array *array, t_garbages *pbi)
 // {
 //     ft_check_empty_array_a(array);
 //     check_malloc_a_temp(array, pbi);
@@ -72,22 +88,33 @@ int  push_b_intermediate(t_array *array, t_garbages *pbi)
 //     array->a = pbi->a_temp;
 //     array->size_b = array->size_b + 1;
 //     if (array->size_b == 1)
+//     {
 //         pbi->b_temp[0] = pbi->k[0];
+//         // array->b = pbi->b_temp;
+//         // printf("pbi->b_temp = %d %d | size_b = %d\n", pbi->b_temp[0], pbi->b_temp[1], array->size_b);
+//         // free(pbi->b_temp[array->size_b]);
+//         // printf("pbi->b_temp = %d %d | size_b = %d\n", pbi->b_temp[0], pbi->b_temp[1], array->size_b);
+
+//     }
 //     if (array->size_b > 1)
 //     {
 //         pbi->i = 1;
 //         pbi->j = 0;
 //         pbi->b_temp[0] = pbi->k[0];
 //         while (pbi->i < array->size_b)
-//             pbi->b_temp[pbi->i++] = array->b[pbi->j++];
+//         {
+//             pbi->b_temp[pbi->i] = array->b[pbi->j];
+//             pbi->i++;
+//             pbi->j++;
+//         }
 //     }
 //     array->b = pbi->b_temp;
-//     return (1);
-// }
+// //    printf("pbi->b_temp[pbi->i] = %d | array->b[pbi->j] = %d | size_b = %d\n", pbi->b_temp[pbi->i], array->b[pbi->j], array->size_b);
 
-// int push_b(t_array *array, t_garbages *pbi)
-// {
-//     if (push_b_intermediate(array, pbi) == 1)
-//        write(1, "pb\n", 3);
+
+//     // free(array->b);
+//     // free(pbi->b_temp);
+
+//     write(1, "pb\n", 3);
 //     return (0);
 // }
