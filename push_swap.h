@@ -34,6 +34,10 @@ int     swap_b(t_array *array);
 int     swap_b_intermediate(t_array *array);
 int     ss(t_array *array);
 int     push_b(t_array *array, t_garbages *garbages);
+
+int  push_b_intermediate(t_array *array, t_garbages *pbi);
+
+
 int     push_a(t_array *array, t_garbages *garbages);
 int     rotate_a(t_array *array, t_garbages *garbages);
 int     rotate_a_intermediate(t_array *array, t_garbages *garbages);
@@ -46,6 +50,7 @@ int     reverse_rotate_b(t_array *array, t_garbages *garbages);
 int     reverse_rotate_b_intermediate(t_array *array, t_garbages *garbages);
 int     rrr(t_array *array, t_garbages *garbages);
 int     test(t_array *array, t_garbages *garbages);
+void    *check_malloc_array(t_array *array);
 void    *check_malloc_int_array(t_array *array);
 void    *check_malloc_a(t_array *array);
 void    *check_malloc_b(t_array *array);

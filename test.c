@@ -27,7 +27,13 @@ int test(t_array *array, t_garbages *garbages)
     //     i++;
     //     write(1, "\n", 1);
     // }
-    // push_b(array, garbages);
+    // push_b_intermediate(array, garbages);
+    // push_b_intermediate(array, garbages);
+    // while (1)
+    // {
+    //     sleep(1);
+    //     printf("%d\n" , getpid());    
+    // }
     // push_b(array, garbages);
     // push_b(array, garbages);
     // push_b(array, garbages);
@@ -75,24 +81,19 @@ int test(t_array *array, t_garbages *garbages)
 
 
 //  ./a.out 7 2 6 5 3
-    push_b(array, garbages);
-    while (1)
-    {
-        sleep(1);
-        printf("%d\n" , getpid());    
-    }
-    push_b(array, garbages);
-    push_b(array, garbages);
-    swap_a(array);
-    swap_b(array);
-    ss(array);
-    rotate_a(array, garbages);
-    rotate_b(array, garbages);
-    rr(array, garbages);
-    reverse_rotate_a(array, garbages);
-    reverse_rotate_b(array, garbages);
-    rrr(array, garbages);
-    push_a(array, garbages);
+    // push_b(array, garbages);
+    // push_b(array, garbages);
+    // push_b(array, garbages);
+    // swap_a(array);
+    // swap_b(array);
+    // ss(array);
+    // rotate_a(array, garbages);
+    // rotate_b(array, garbages);
+    // rr(array, garbages);
+    // reverse_rotate_a(array, garbages);
+    // reverse_rotate_b(array, garbages);
+    // rrr(array, garbages);
+    // push_a(array, garbages);
     //     while (1)
     // {
     //     sleep(1);

@@ -10,6 +10,7 @@ int reverse_rotate_b_intermediate(t_array *array, t_garbages *rrbi)
         rrbi->b_temp[rrbi->i++] = array->b[rrbi->j++];
     rrbi->b_temp[0] = rrbi->k[0];
     array->b = rrbi->b_temp;
+    free(rrbi->a_temp);
     return (1);
 }
 

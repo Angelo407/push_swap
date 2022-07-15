@@ -16,6 +16,7 @@ int rotate_a_intermediate(t_array *array, t_garbages *rai)
        rai->j = 0;
         while (rai->i < array->size_a)
             array->a[rai->i++] = rai->a_temp[rai->j++];
+        free(rai->a_temp);
     return (1);
 }
 

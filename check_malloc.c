@@ -1,5 +1,16 @@
 # include "push_swap.h"
 
+void    *check_malloc_array(t_array *array)
+{
+    array->array = malloc(sizeof(t_array));
+    if (!array->array)
+    {
+        printf("Le malloc array a échoué !\n");
+        return (0);
+    }
+    return (array->array);
+}
+
 void    *check_malloc_int_array(t_array *array)
 {
     array->int_array = malloc(sizeof(int) * array->size_tab_max);
