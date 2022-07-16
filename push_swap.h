@@ -57,6 +57,7 @@ int     free_malloc_b_temp(t_array *array, t_garbages *garbages);
 int     free_malloc_last(t_array *array);
 int     test(t_array *array, t_garbages *garbages);
 int     ft_nbr_already_sorted(t_array *array);
+int     ft_check_duplicate_nbr(t_array *array);
 
 
 
