@@ -11,7 +11,10 @@ static int  push_a_intermediate(t_array *array, t_garbages *pai)
     while (pai->i < array->size_b)
         pai->b_temp[pai->i++] = array->b[pai->j++];
     array->size_b = array->size_b - 1;
-    array->b = pai->b_temp;
+    pai->i = 0;
+    while (pai->i < array->size_b)
+        array->b[pai->i++] = pai->b_temp[pai->i++];
+    free_malloc_b_temp(array, pai);
     array->size_a = array->size_a + 1;
     if (array->size_a == 1)
         pai->a_temp[0] = pai->k[0];
@@ -23,7 +26,7 @@ static int  push_a_intermediate(t_array *array, t_garbages *pai)
         while (pai->i < array->size_a)
             pai->a_temp[pai->i++] = array->a[pai->j++];
     }
-    array->a = pai->a_temp;
+    free_malloc_a_temp(array, pai);
     return (1);
 }
 

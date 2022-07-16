@@ -23,7 +23,14 @@ static int  push_b_intermediate(t_array *array, t_garbages *pbi)
         while (pbi->i < array->size_b)
             pbi->b_temp[pbi->i++] = array->b[pbi->j++];
     }
-    free_malloc_b_temp(array, pbi);
+    pbi->i = 0;
+    pbi->j = 0;
+    while (pbi->i < array->size_b)
+    {
+        array->b[pbi->i++] = pbi->b_temp[pbi->j++];
+//        printf("array->b[pbi->i] = %d\n", array->b[pbi->i]);
+    }
+    free(pbi->b_temp);
     return (1);
 }
 

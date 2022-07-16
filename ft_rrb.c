@@ -11,8 +11,9 @@ int reverse_rotate_b_intermediate(t_array *array, t_garbages *rrbi)
         rrbi->b_temp[rrbi->i++] = array->b[rrbi->j++];
     rrbi->b_temp[0] = rrbi->k[0];
     rrbi->i = 0;
+    rrbi->j = 0;
     while (rrbi->i < array->size_b)
-        array->b[rrbi->i++] = rrbi->b_temp[rrbi->i++];
+        array->b[rrbi->i++] = rrbi->b_temp[rrbi->j++];
     free(rrbi->b_temp);
     return (1);
 }

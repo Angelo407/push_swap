@@ -14,8 +14,9 @@ int rotate_b_intermediate(t_array *array, t_garbages *rbi)
             rbi->b_temp[array->size_b - 1] = rbi->k[0];
     }
     rbi->i = 0;
+    rbi->j = 0;
     while (rbi->i < array->size_b)
-        array->b[rbi->i++] = rbi->b_temp[rbi->i++];
+        array->b[rbi->i++] = rbi->b_temp[rbi->j++];
     free(rbi->b_temp);
     return (1);
 }
