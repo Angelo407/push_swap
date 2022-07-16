@@ -59,11 +59,7 @@ int     test(t_array *array, t_garbages *garbages);
 int     ft_nbr_already_sorted(t_array *array);
 int     ft_check_duplicate_nbr(t_array *array, t_garbages *garbages);
 int     ft_check_errors(t_array *array, t_garbages *garbages);
-
-
-
-
-
+int     ft_check_is_integer(t_array *array);
 
 
 #endif

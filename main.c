@@ -33,8 +33,12 @@ int main(int argc, char **argv)
     garbages.j = 0;
     while (garbages.j < array.size_a)
         array.a[garbages.i++] = array.int_array[garbages.j++];
-    ft_nbr_already_sorted(&array);
-    ft_check_duplicate_nbr(&array, &garbages);
+    // ft_nbr_already_sorted(&array);
+    // ft_check_duplicate_nbr(&array, &garbages);
+    ft_check_errors(&array, &garbages);
+    ft_check_is_integer(&array);
+
+
 
     // test(&array, &garbages);
 
