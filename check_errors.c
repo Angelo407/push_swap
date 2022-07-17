@@ -50,26 +50,83 @@ int ft_check_duplicate_nbr(t_array *array, t_garbages *cdn)
     return (0);
 }
 
-int ft_check_is_integer(t_array *array)
+// int ft_check_is_nbr_type_integer(t_array *array)
+// {
+//     long i;
+//     long int_max;
+//     long int_min;
+
+//     i = 0;
+//     int_max = 2147483647;
+//     int_min = -2147483648;
+//     while (i < array->size_a)
+//     {
+//         if ((long)array->a[i] < int_min || (long)array->a[i] > int_max)
+//         {
+//             printf("Erreur\nIl y a minimum un nombre qui n'est pas un integer !");
+//             return (0);
+//         }
+//         else
+//         i++;
+//     }
+//     printf("salut\n");
+//     return (0);
+// }
+
+int ft_check_is_nbr_type_integer(t_array *array)
 {
-    int i;
+    long    i;
+    long    int_min;
+    long    int_max;
 
+    int_max = 2147483647;
+    int_min = -2147483648;
     i = 0;
-
-    printf("sizeof = %lu\n", sizeof(array->a[0]));
-
     while (i < array->size_a)
     {
-        if (sizeof(int) == (int)array->a[i])
+        if (array->a[i] > int_max || array->a[i] < int_min)
         {
-            i++;
+            printf("Erreur\nIl y a minimum un nombre qui n'est pas un integer !");
+            return (0);
         }
         else
         {
-            printf("Erreur\nIl y a un ou des éléments du tableau qui ne sont pas des entiers !\n");
-            return (1);
+            printf("array->a[i] = %d\n", array->a[i]);
+            i++;
         }
     }
     return (0);
 }
-        // else if (sizeof(int) != array->a[i])
+
+
+
+
+
+
+// int ft_check_is_integer(t_array *array)
+// {
+//     int i;
+//     char c;
+
+//     i = 0;
+//     c = 'a';
+//     printf("sizeof(array->a[i]) = %lu\n", sizeof(array->a[i]));
+//     printf("sizeof(array->a) = %lu\n", sizeof(array->a));
+//     printf("sizeof(c) = %lu\n", sizeof(c));
+
+//     while (i < array->size_a)
+//     {
+//         if (sizeof(array->a[i]) == sizeof(int))
+//         {
+//             printf("array->a[i] = %d | sizeof(array->a[i]) = %lu\n", array->a[i], sizeof(array->a[i]));
+//             i++; 
+//         }
+//         else
+//         {
+//             printf("Erreur\nIl y a un ou des éléments du tableau qui ne sont pas des entiers !\n");
+//             // return (0);
+//         }
+//     }
+//     return (0);
+// }
+
