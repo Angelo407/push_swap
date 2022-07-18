@@ -72,16 +72,9 @@ int ft_is_number(t_array *array, char **str)
     return (0);
 }
 
+int ft_check_space(t_array *array, char **str)
+{
 
 
-
-
-    // int z = 0;
-    // while (z < (array.size_a * 2) - 1)
-    // {
-    //     if (argv[1][z] == '\0')
-    //         z++;
-    //     if (!(argv[1][z] >= '0' && argv[1][z] <= '9'))
-    //         display_error();
-    //     z++;
-    // }
+    return (0);
+}

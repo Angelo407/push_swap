@@ -55,13 +55,11 @@ int     free_malloc_a_temp(t_array *array, t_garbages *garbages);
 int     free_malloc_b_temp(t_array *array, t_garbages *garbages);
 int     free_malloc_last(t_array *array);
 int     test(t_array *array, t_garbages *garbages);
-int     display_error(void);
-
+// int     display_error(void);
 int     ft_nbr_already_sorted(t_array *array);
-
 int     ft_check_duplicate_nbr(t_array *array, t_garbages *garbages);
-
 int     ft_is_number(t_array *array, char **str);
+int     ft_check_space(t_array *array, char **str);
 
 
 
