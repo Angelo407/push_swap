@@ -28,7 +28,6 @@ int  free_malloc_b_temp(t_array *array, t_garbages *garbages)
 
 int free_malloc_last(t_array *array)
 {
-    free(array->int_array);
     free(array->a);
     free(array->b);
     free(array->array);

@@ -1,12 +1,9 @@
 # include "push_swap.h"
 
-int ft_check_errors(t_array *array, t_garbages *ce)
+int display_error(void) // problème avec cette fonction : par exemple, essayer de la mettre ds ft_nbr_already_sorted
 {
-    if (ft_nbr_already_sorted(array) == 1)
-        printf("Erreur\nLes nombres sont déjà triés !\n");
-    else if (ft_check_duplicate_nbr(array, ce) == 1)
-        printf("Erreur\nIl y a minimum un nombre dubliqué !\n");
-    return (0); // COMMENT METTRE UN EXIT SANS QUE CA QUITTE LE PROGRAMME S'IL N'Y A PAS DE PROBLèME ?
+    write(1, "Error\n", 6);
+    exit (0);
 }
 
 int ft_nbr_already_sorted(t_array *nas)
@@ -23,7 +20,8 @@ int ft_nbr_already_sorted(t_array *nas)
         else
             return (0);
     }
-    return (1);
+    write(1, "Error\n", 6);
+    exit (0);
 }
 
 int ft_check_duplicate_nbr(t_array *array, t_garbages *cdn)
@@ -46,54 +44,30 @@ int ft_check_duplicate_nbr(t_array *array, t_garbages *cdn)
     }
     z = z - array->size_a; 
     if (z > 0)
-        return (1);
+    {
+        write(1, "Error\n", 6);
+        exit (0);
+    }
     return (0);
 }
 
-// int ft_check_is_nbr_type_integer(t_array *array)
-// {
-//     long i;
-//     long int_max;
-//     long int_min;
-
-//     i = 0;
-//     int_max = 2147483647;
-//     int_min = -2147483648;
-//     while (i < array->size_a)
-//     {
-//         if ((long)array->a[i] < int_min || (long)array->a[i] > int_max)
-//         {
-//             printf("Erreur\nIl y a minimum un nombre qui n'est pas un integer !");
-//             return (0);
-//         }
-//         else
-//         i++;
-//     }
-//     printf("salut\n");
-//     return (0);
-// }
-
-int ft_check_is_nbr_type_integer(t_array *array)
+int ft_is_number(t_array *array, char **str)
 {
-    long    i;
-    long    int_min;
-    long    int_max;
-
-    int_max = 2147483647;
-    int_min = -2147483648;
+    int i;
+    
     i = 0;
-    while (i < array->size_a)
+    while (i < (array->size_a * 2) - 1)
     {
-        if (array->a[i] > int_max || array->a[i] < int_min)
-        {
-            printf("Erreur\nIl y a minimum un nombre qui n'est pas un integer !");
-            return (0);
-        }
-        else
-        {
-            printf("array->a[i] = %d\n", array->a[i]);
+        if (str[1][i] == '\0')
             i++;
+        if (str[1][i] == '+' || str[1][i] == '-')
+            str[1][i] = str[1][i + 1];
+        if (!(str[1][i] >= '0' && str[1][i] <= '9'))
+        {
+            write(1, "Error\n", 6);
+            exit (0);
         }
+        i++;
     }
     return (0);
 }
@@ -102,31 +76,12 @@ int ft_check_is_nbr_type_integer(t_array *array)
 
 
 
-
-// int ft_check_is_integer(t_array *array)
-// {
-//     int i;
-//     char c;
-
-//     i = 0;
-//     c = 'a';
-//     printf("sizeof(array->a[i]) = %lu\n", sizeof(array->a[i]));
-//     printf("sizeof(array->a) = %lu\n", sizeof(array->a));
-//     printf("sizeof(c) = %lu\n", sizeof(c));
-
-//     while (i < array->size_a)
-//     {
-//         if (sizeof(array->a[i]) == sizeof(int))
-//         {
-//             printf("array->a[i] = %d | sizeof(array->a[i]) = %lu\n", array->a[i], sizeof(array->a[i]));
-//             i++; 
-//         }
-//         else
-//         {
-//             printf("Erreur\nIl y a un ou des éléments du tableau qui ne sont pas des entiers !\n");
-//             // return (0);
-//         }
-//     }
-//     return (0);
-// }
-
+    // int z = 0;
+    // while (z < (array.size_a * 2) - 1)
+    // {
+    //     if (argv[1][z] == '\0')
+    //         z++;
+    //     if (!(argv[1][z] >= '0' && argv[1][z] <= '9'))
+    //         display_error();
+    //     z++;
+    // }

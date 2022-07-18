@@ -6,13 +6,14 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+# define MAX_INT 2147483647
+# define MIN_INT -2147483648
+
 typedef struct array {
-    int *int_array;
     int *a; 
     int size_a;
     int *b;
     int size_b;
-    int size_tab_max;
     int *array;
 }   t_array;
 
@@ -24,8 +25,8 @@ typedef struct garbages {
     int k[1];
 }   t_garbages;
 
-int     ft_atoi(const char *str);
-//int     *array_atoi(int argc, char **argv);
+int     ft_atoi(char *str);
+void    ft_isdigit(int nbr);
 int     ft_check_empty_array_a(t_array *array);
 int     ft_check_empty_array_b(t_array *array);
 int     swap_a(t_array *array);
@@ -35,7 +36,6 @@ int     swap_b_intermediate(t_array *array);
 int     ss(t_array *array);
 int     push_a(t_array *array, t_garbages *garbages);
 int     push_b(t_array *array, t_garbages *garbages);
-// int  push_b_intermediate(t_array *array, t_garbages *pbi);
 int     rotate_a(t_array *array, t_garbages *garbages);
 int     rotate_a_intermediate(t_array *array, t_garbages *garbages);
 int     rotate_b(t_array *array, t_garbages *garbages);
@@ -47,7 +47,6 @@ int     reverse_rotate_b(t_array *array, t_garbages *garbages);
 int     reverse_rotate_b_intermediate(t_array *array, t_garbages *garbages);
 int     rrr(t_array *array, t_garbages *garbages);
 void    *check_malloc_array(t_array *array);
-void    *check_malloc_int_array(t_array *array);
 void    *check_malloc_a(t_array *array);
 void    *check_malloc_b(t_array *array);
 void    *check_malloc_a_temp(t_array *array, t_garbages *garbages);
@@ -56,11 +55,13 @@ int     free_malloc_a_temp(t_array *array, t_garbages *garbages);
 int     free_malloc_b_temp(t_array *array, t_garbages *garbages);
 int     free_malloc_last(t_array *array);
 int     test(t_array *array, t_garbages *garbages);
+int     display_error(void);
+
 int     ft_nbr_already_sorted(t_array *array);
+
 int     ft_check_duplicate_nbr(t_array *array, t_garbages *garbages);
-int     ft_check_errors(t_array *array, t_garbages *garbages);
-// int     ft_check_is_integer(t_array *array);
-int     ft_check_is_nbr_type_integer(t_array *array);
+
+int     ft_is_number(t_array *array, char **str);
 
 
 

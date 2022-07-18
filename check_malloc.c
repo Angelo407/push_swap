@@ -13,7 +13,7 @@ void    *check_malloc_array(t_array *array)
 
 void    *check_malloc_a(t_array *array)
 {
-    array->a = malloc(sizeof(int) * array->size_tab_max);
+    array->a = malloc(sizeof(int) * array->size_a);
     if (!array->a)
     {
         printf("Erreur\nLe malloc du pointeur a a échoué !\n");
@@ -24,7 +24,7 @@ void    *check_malloc_a(t_array *array)
 
 void    *check_malloc_b(t_array *array)
 {
-    array->b = malloc(sizeof(int) * array->size_tab_max);
+    array->b = malloc(sizeof(int) * array->size_a);
     if (!array->b)
     {
         printf("Erreur\nLe malloc du pointeur b a échoué !\n");
