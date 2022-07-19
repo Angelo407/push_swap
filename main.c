@@ -9,22 +9,65 @@ int main(int argc, char **argv)
 
     if (argc == 1)
         return (0);
+    
+
+    
     array.size_a = argc - 1;
     check_malloc_array(&array);
     check_malloc_a(&array);
     check_malloc_b(&array);
     array.size_b = 0;
 
+    ft_with_quotes(&array, argc, argv);
 
-// fonction qui compte les espaces et qui retourne une erreur si plus d'un espace
+    // char *str_temp;
 
-    ft_is_number(&array, argv);
+    // str_temp = argv[1];
+
+
+    // garbages.i = 1;
+    // garbages.j = 0;
+    // while (garbages.j < array.size_a)
+    //     str_temp[garbages.j++] = ft_atoi(argv[garbages.i++]);
+
+    // printf("str_temp[0] : %d\n", str_temp[0]);
+
+    // printf("argv[1] = %s\n", argv[1]);
+    
+    // printf("argv[0][0] = %c\n", argv[0][0]);
+    // printf("argv[0][1] = %c\n", argv[0][1]);
+    // printf("argv[0][2] = %c\n", argv[0][2]);
+    // printf("argv[0][3] = %c\n", argv[0][3]);
+    // printf("argv[0][4] = %c\n", argv[0][4]);
+    // printf("argv[0][5] = %c\n", argv[0][5]);
+    // printf("argv[0][6] = %c\n", argv[0][6]);
+    // printf("argv[0][7] = %c\n", argv[0][7]);
+    // printf("argv[0][8] = %c\n", argv[0][8]);
+    // printf("argv[0][9] = %c\n", argv[0][9]);
+    // printf("argv[0][10] = %c\n", argv[0][10]);
+
+    // printf("argv[1][0] = %c\n", argv[1][0]);
+    // printf("argv[1][1] = %c\n", argv[1][1]);
+    // printf("argv[1][2] = %c\n", argv[1][2]);
+    // printf("argv[1][3] = %c\n", argv[1][3]);
+    // printf("argv[1][4] = %c\n", argv[1][4]);
+    // printf("argv[1][5] = %c\n", argv[1][5]);
+    // printf("argv[1][6] = %c\n", argv[1][6]);
+    // printf("argv[1][7] = %c\n", argv[1][7]);
+    // printf("argv[1][8] = %c\n", argv[1][8]);
+
+
+    // printf("argc = %d\n", argc);
+
+
+
+    // ft_is_number(&array, argv);
     garbages.i = 1;
     garbages.j = 0;
-    while (garbages.j < array.size_a)
-        array.a[garbages.j++] = ft_atoi(argv[garbages.i++]);
-    ft_nbr_already_sorted(&array);
-    ft_check_duplicate_nbr(&array, &garbages);
+    // while (garbages.j < array.size_a)
+    //     array.a[garbages.j++] = ft_atoi(argv[garbages.i++]);
+    // ft_nbr_already_sorted(&array);
+    // ft_check_duplicate_nbr(&array, &garbages);
     
 
     // test(&array, &garbages); // PROBLèEME EN METTANT QUE DEUX éLéMENTS !!!

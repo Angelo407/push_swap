@@ -26,7 +26,8 @@ typedef struct garbages {
 }   t_garbages;
 
 int     ft_atoi(char *str);
-void    ft_isdigit(int nbr);
+int     ft_atoi_origin(const char *str);
+int     ft_strlen(const char *str);
 int     ft_check_empty_array_a(t_array *array);
 int     ft_check_empty_array_b(t_array *array);
 int     swap_a(t_array *array);
@@ -59,9 +60,7 @@ int     test(t_array *array, t_garbages *garbages);
 int     ft_nbr_already_sorted(t_array *array);
 int     ft_check_duplicate_nbr(t_array *array, t_garbages *garbages);
 int     ft_is_number(t_array *array, char **str);
-int     ft_check_space(t_array *array, char **str);
-
-
+int     ft_with_quotes(t_array *array, int ac, char **str);
 
 #endif
 
