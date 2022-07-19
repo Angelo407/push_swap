@@ -3,8 +3,8 @@
 int	ft_atoi_origin(const char *str)
 {
 	int	i;
-	int	neg;
-	int	res;
+	long long	neg;
+	long long	res;
 
 	i = 0;
 	neg = 1;
@@ -21,6 +21,11 @@ int	ft_atoi_origin(const char *str)
 	{
 		res = (res * 10) + (str[i] - '0');
 		i++;
+	}
+	if ((res * neg) > MAX_INT || (res * neg) < MIN_INT)
+	{
+        write(1, "Error\n", 6);
+		exit (0);
 	}
 	return (res * neg);
 }
