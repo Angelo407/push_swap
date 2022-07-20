@@ -46,7 +46,7 @@ void    *check_malloc_a_temp(t_array *array, t_garbages *garbages)
 
 void    *check_malloc_b_temp(t_array *array, t_garbages *garbages)
 {
-    garbages->b_temp = malloc(sizeof(int) * array->size_b);
+    garbages->b_temp = malloc(sizeof(int) * array->size_b + 1);
     if (!garbages->b_temp)
     {
         printf("Le malloc du pointeur b_temp a échoué !\n");

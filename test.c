@@ -34,11 +34,22 @@ int test(t_array *array, t_garbages *garbages)
     //     sleep(1);
     //     printf("%d\n" , getpid());    
     // }
-    // push_b(array, garbages);
-    // push_b(array, garbages);
-    // push_b(array, garbages);
-    // push_b(array, garbages);
-    // push_b(array, garbages);
+    push_b(array, garbages);
+    push_b(array, garbages);
+    push_b(array, garbages);
+    push_b(array, garbages);
+    push_b(array, garbages);
+    push_b(array, garbages);
+    push_b(array, garbages);
+    push_b(array, garbages);
+    push_a(array, garbages);
+    push_a(array, garbages);
+    push_a(array, garbages);
+    push_a(array, garbages);
+    push_a(array, garbages);
+    push_a(array, garbages);
+    push_a(array, garbages);
+    push_a(array, garbages);
 //------------------------------------------------------------------------------
     // rotate_a(array, garbages);
     // rotate_a(array, garbages);
@@ -79,7 +90,7 @@ int test(t_array *array, t_garbages *garbages)
     // rrr(array, garbages);
     // rrr(array, garbages);
 
-
+/*
 //  ./a.out 7 2 6 5 3
     push_b(array, garbages);
     push_b(array, garbages);
@@ -94,11 +105,8 @@ int test(t_array *array, t_garbages *garbages)
     reverse_rotate_b(array, garbages);
     rrr(array, garbages);
     push_a(array, garbages);
-    //     while (1)
-    // {
-    //     sleep(1);
-    //     printf("%d\n" , getpid());    
-    // }
 // RESULTAT : a = 6 5 3 -> size 3 | b = 2 7 -> size 2 
+*/
+
     return (0);
 }

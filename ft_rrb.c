@@ -1,8 +1,7 @@
 # include "push_swap.h"
 
 int reverse_rotate_b_intermediate(t_array *array, t_garbages *rrbi)
-{    
-    ft_check_empty_array_b(array);
+{
     check_malloc_b_temp(array, rrbi);
     rrbi->i = 1;
     rrbi->j = 0;
@@ -20,6 +19,8 @@ int reverse_rotate_b_intermediate(t_array *array, t_garbages *rrbi)
 
 int reverse_rotate_b(t_array *array, t_garbages *rrbi)
 {
+    if (array->size_b <= 1)
+        return (0);
     if (reverse_rotate_b_intermediate(array, rrbi) == 1)
        write(1, "rrb\n", 4);
     return (0);

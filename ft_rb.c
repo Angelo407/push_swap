@@ -1,8 +1,7 @@
 # include "push_swap.h"
 
 int rotate_b_intermediate(t_array *array, t_garbages *rbi)
-{    
-    ft_check_empty_array_b(array);
+{
     check_malloc_b_temp(array, rbi);
     rbi->i = 0;
     rbi->j = 1;
@@ -23,6 +22,8 @@ int rotate_b_intermediate(t_array *array, t_garbages *rbi)
 
 int rotate_b(t_array *array, t_garbages *rbi)
 {
+    if (array->size_b <= 1)
+        return (0);
     if (rotate_b_intermediate(array, rbi) == 1)
        write(1, "rb\n", 3);
     return (0);

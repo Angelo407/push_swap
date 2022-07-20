@@ -2,7 +2,6 @@
 
 int reverse_rotate_a_intermediate(t_array *array, t_garbages *rrai)
 {
-    ft_check_empty_array_a(array);
     check_malloc_a_temp(array, rrai);
     rrai->i = 1;
     rrai->j = 0;
@@ -20,6 +19,8 @@ int reverse_rotate_a_intermediate(t_array *array, t_garbages *rrai)
 
 int reverse_rotate_a(t_array *array, t_garbages *rrai)
 {
+    if (array->size_a <= 1)
+        return (0);
     if (reverse_rotate_a_intermediate(array, rrai) == 1)
         write(1, "rra\n", 4);
     return (0);
