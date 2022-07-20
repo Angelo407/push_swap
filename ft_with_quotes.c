@@ -38,8 +38,6 @@ int *ft_with_quotes(t_array *array, int ac, char **str)
     str_temp = str[1];
     size = ft_strlen(str_temp);
     array->size_a = ft_real_size_digit(str_temp);
-    check_malloc_array(array);
-    check_malloc_a(array);
     if (ac == 2)
     {
         i = 0;
@@ -51,6 +49,6 @@ int *ft_with_quotes(t_array *array, int ac, char **str)
             array->a[j++] = ft_atoi_origin(&str_temp[i++]);
         }
     }
-//  CHECKER LES LEAKS !!!!
+// PROBLèME SI JE METS UN NOMBRE QUI PLS NOMBRE, UN CHIFFRE !
     return (array->a);
 }

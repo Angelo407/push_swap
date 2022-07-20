@@ -61,7 +61,6 @@ int     ft_check_nbr_is_sorted(t_array *array);
 int     ft_check_duplicate_nbr(t_array *array, t_garbages *garbages);
 int     ft_check_is_number(t_array *array, char **str);
 int     *ft_with_quotes(t_array *array, int ac, char **str);
-// int     ft_check_one_stack(int ac);
 
 
 
