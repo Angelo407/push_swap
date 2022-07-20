@@ -28,8 +28,7 @@ typedef struct garbages {
 int     ft_atoi(char *str);
 int     ft_atoi_origin(const char *str);
 int     ft_strlen(const char *str);
-int     ft_check_empty_array_a(t_array *array);
-int     ft_check_empty_array_b(t_array *array);
+int     *ft_create_int_array(t_array *array, int ac, char **str);
 int     swap_a(t_array *array);
 int     swap_a_intermediate(t_array *array);
 int     swap_b(t_array *array);
@@ -55,12 +54,16 @@ void    *check_malloc_b_temp(t_array *array, t_garbages *garbages);
 int     free_malloc_a_temp(t_array *array, t_garbages *garbages);
 int     free_malloc_b_temp(t_array *array, t_garbages *garbages);
 int     free_malloc_last(t_array *array);
+int     ft_check_empty_array_a(t_array *array);
+int     ft_check_empty_array_b(t_array *array);
 int     test(t_array *array, t_garbages *garbages);
-int     ft_nbr_already_sorted(t_array *array);
+int     ft_check_nbr_is_sorted(t_array *array);
 int     ft_check_duplicate_nbr(t_array *array, t_garbages *garbages);
-int     ft_is_number(t_array *array, char **str);
+int     ft_check_is_number(t_array *array, char **str);
 int     *ft_with_quotes(t_array *array, int ac, char **str);
+// int     ft_check_one_stack(int ac);
+
+
+
 
 #endif
-
-

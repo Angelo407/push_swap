@@ -9,27 +9,28 @@ int main(int argc, char **argv)
 
     if (argc == 1)
         return (0);
-    
-
-    
     array.size_a = argc - 1;
+    array.size_b = 0;
     check_malloc_array(&array);
     check_malloc_a(&array);
     check_malloc_b(&array);
-    array.size_b = 0;
+
 
     // array.a = ft_with_quotes(&array, argc, argv);
-    ft_with_quotes(&array, argc, argv);
+    
+    
+    // ft_with_quotes(&array, argc, argv);
+
+    ft_create_int_array(&array, argc, argv);
 
 
 
-
-    // ft_is_number(&array, argv);
+    // ft_check_is_number(&array, argv);
     // garbages.i = 1;
     // garbages.j = 0;
     // while (garbages.j < array.size_a)
     //     array.a[garbages.j++] = ft_atoi(argv[garbages.i++]);
-    // ft_nbr_already_sorted(&array);
+    // ft_check_nbr_is_sorted(&array);
     // ft_check_duplicate_nbr(&array, &garbages);
     
 
