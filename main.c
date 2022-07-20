@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 PROBLèME :
 
 1) Voir les retour de rr, rrr et ss
-2) problème de logique entre push a et push b : lequel est juste ?
+2) entre les guillements : fonctionne avec un nombre mais pas un chiffre
 
 */
     return (0);

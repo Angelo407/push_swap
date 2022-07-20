@@ -39,17 +39,17 @@ int test(t_array *array, t_garbages *garbages)
     push_b(array, garbages);
     push_b(array, garbages);
     push_b(array, garbages);
-    push_b(array, garbages);
-    push_b(array, garbages);
-    push_b(array, garbages);
+    // push_b(array, garbages);
+    // push_b(array, garbages);
+    // push_b(array, garbages);
     push_a(array, garbages);
     push_a(array, garbages);
     push_a(array, garbages);
     push_a(array, garbages);
     push_a(array, garbages);
-    push_a(array, garbages);
-    push_a(array, garbages);
-    push_a(array, garbages);
+    // push_a(array, garbages);
+    // push_a(array, garbages);
+    // push_a(array, garbages);
 //------------------------------------------------------------------------------
     // rotate_a(array, garbages);
     // rotate_a(array, garbages);
