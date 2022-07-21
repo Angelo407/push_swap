@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     // ft_check_duplicate_nbr(&array, &garbages);
     
 
-    test(&array, &garbages); // PROBLèEME EN METTANT QUE DEUX éLéMENTS !!!
+    // test(&array, &garbages); // PROBLèEME EN METTANT QUE DEUX éLéMENTS !!!
 
 
 
