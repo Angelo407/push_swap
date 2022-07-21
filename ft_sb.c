@@ -6,6 +6,8 @@ int swap_b_intermediate(t_array *array)
     int idxlast;
     int i;
 
+    if (array->size_b <= 1)
+        return (0);
     idxfirst = array->b[0];
     idxlast = array->b[array->size_b - 1];
     i = -1;
@@ -22,8 +24,6 @@ int swap_b_intermediate(t_array *array)
 
 int swap_b(t_array *array)
 {    
-    if (array->size_b <= 1)
-        return (0);
     if (swap_b_intermediate(array) == 1)
        write(1, "sb\n", 3);
     return (0);

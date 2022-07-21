@@ -27,6 +27,13 @@ static int  ft_real_size_digit(char *str)
 	return (j);
 }
 
+static char  num_to_nums()
+{
+
+
+    return (0);
+}
+
 int *ft_with_quotes(t_array *array, int ac, char **str)
 {
     int     i;
@@ -49,6 +56,32 @@ int *ft_with_quotes(t_array *array, int ac, char **str)
             array->a[j++] = ft_atoi_origin(&str_temp[i++]);
         }
     }
-// PROBLèME SI JE METS UN NOMBRE QUI PLS NOMBRE, UN CHIFFRE !
     return (array->a);
 }
+
+/*
+int *ft_with_quotes(t_array *array, int ac, char **str)
+{
+    int     i;
+    int     j;
+    int     size;
+    char    *str_temp;
+
+    ft_check_one_stack(ac);
+    str_temp = str[1];
+    size = ft_strlen(str_temp);
+    array->size_a = ft_real_size_digit(str_temp);
+    if (ac == 2)
+    {
+        i = 0;
+        j = 0;
+        while (j < size)
+        {
+            while (str_temp[i] == ' ')
+                i++;
+            array->a[j++] = ft_atoi_origin(&str_temp[i++]);
+        }
+    }
+    return (array->a);
+}
+*/

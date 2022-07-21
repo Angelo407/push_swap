@@ -41,6 +41,8 @@ PROBLèME :
 
 1) Voir les retour de rr, rrr et ss
 2) entre les guillements : fonctionne avec un nombre mais pas un chiffre
+3) Laisser que Error ds les messages d'erreurs des mallocs et mettre write
+4) Séparer dans une fonction INT_MAX INT_MIN
 
 */
     return (0);

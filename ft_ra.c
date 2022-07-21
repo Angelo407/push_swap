@@ -2,6 +2,8 @@
 
 int rotate_a_intermediate(t_array *array, t_garbages *rai)
 {
+    if (array->size_a <= 1)
+        return (0);
     check_malloc_a_temp(array, rai);
     rai->i = 0;
     rai->j = 1;
@@ -22,8 +24,6 @@ int rotate_a_intermediate(t_array *array, t_garbages *rai)
 
 int rotate_a(t_array *array, t_garbages *rai)
 {
-    if (array->size_a <= 1)
-        return (0);
     if (rotate_a_intermediate(array, rai) == 1)
        write(1, "ra\n", 3);
     return (0);
