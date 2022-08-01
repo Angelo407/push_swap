@@ -6,7 +6,7 @@
 #    By: aprosper <aprosper@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/01 12:27:23 by aprosper          #+#    #+#              #
-#    Updated: 2022/08/01 14:46:50 by aprosper         ###   ########.fr        #
+#    Updated: 2022/08/01 15:31:08 by aprosper         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,10 +52,6 @@ SRC_UTILS =	\
 SRC_RACINE =	\
 	main.c	\
 	test.c
-	
-#utils/ft_atoi_origin.c
-#utils/ft_atoi.c
-#utils/ft_strlen.c
 
 SRCS = \
 	$(SRC_OPERATIONS)	\
@@ -65,7 +61,7 @@ SRCS = \
 	
 OBJS = ${SRCS:c=o}
 
-all : $(LIBFT) $(NAME)
+all : $(LIBFT) $(NAME) $(PUSH_SWAP)
 
 $(PUSH_SWAP) : $(OBJS)
 	$(CC) $(CFLAGS) $^ $(LIBFT_FILE) -o $(NAME)
@@ -90,8 +86,7 @@ clean :
 	@make clean -C libft
 
 fclean : clean
-	@rm -f client
-	@rm -f server
+	@rm -f push_swap
 
 big_clean : fclean $(LIBFT_FILE)_fclean
 
