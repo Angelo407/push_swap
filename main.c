@@ -6,7 +6,7 @@
 /*   By: aprosper <aprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 12:27:01 by aprosper          #+#    #+#             */
-/*   Updated: 2022/08/01 16:43:01 by aprosper         ###   ########.fr       */
+/*   Updated: 2022/08/01 18:34:39 by aprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,24 @@ int	main(int argc, char **argv)
 	check_malloc_a(&array);
 	check_malloc_b(&array);
 	ft_create_int_array(&array, argc, argv);
-	// ft_check_is_number(&array, argv);
-	// ft_check_nbr_is_sorted(&array);
-	// ft_check_duplicate_nbr(&array, &garbages);
+	ft_check_duplicate_nbr(&array, &garbages);
+	ft_check_nbr_is_sorted(&array);
+
+//	ft_check_is_number(&array, argv); // probleme de gestion avec les + ou les -
 
 
-	//test(&array, &garbages); // PROBLèEME EN METTANT QUE DEUX éLéMENTS !!!
+//	test(&array, &garbages); // PROBLèEME EN METTANT QUE DEUX éLéMENTS !!!
 	// ft_small_sort(&array, &garbages);
 
 	
 	push_b(&array, &garbages);
 	push_b(&array, &garbages);
 	push_b(&array, &garbages);
-	swap_b(&array);
-	swap_a(&array);
-	push_b(&array, &garbages);
-	swap_b(&array);
-	swap_a(&array);
+//	swap_b(&array);
+//	swap_a(&array);
+//	push_b(&array, &garbages);
+//	swap_b(&array);
+//	swap_a(&array);
 //	ss(&array);
 
 	printf("MAIN RESULTAT : array.a[idx] = %d %d %d %d %d %d %d %d %d | array.size_a = %d\n", array.a[0], array.a[1], array.a[2], array.a[3], array.a[4], array.a[5], array.a[6], array.a[7], array.a[8], array.size_a);
@@ -58,10 +59,8 @@ int	main(int argc, char **argv)
 /*
 PROBLèME :
 
-1) Voir les retour de rr, rrr et ss
 2) entre les guillements : fonctionne avec un nombre mais pas un chiffre
 3) Laisser que Error ds les messages d'erreurs des mallocs et mettre write
-4) Séparer dans une fonction INT_MAX INT_MIN
 */
 	return (0);
 }
