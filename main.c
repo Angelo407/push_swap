@@ -6,7 +6,7 @@
 /*   By: aprosper <aprosper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 12:27:01 by aprosper          #+#    #+#             */
-/*   Updated: 2022/08/01 18:34:39 by aprosper         ###   ########.fr       */
+/*   Updated: 2022/08/01 18:49:47 by aprosper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@ int	main(int argc, char **argv)
 	ft_check_duplicate_nbr(&array, &garbages);
 	ft_check_nbr_is_sorted(&array);
 
+// ATTENTION, ENTRE GUILLLEMETS LES INT_MAX ET INT_MIN NE SONT PAS GERER !!!!
+// MAIS JUSQU ICI, LES CHECK ERRORS SONT OK !
+
 //	ft_check_is_number(&array, argv); // probleme de gestion avec les + ou les -
-
-
 //	test(&array, &garbages); // PROBLèEME EN METTANT QUE DEUX éLéMENTS !!!
 	// ft_small_sort(&array, &garbages);
 
