@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aprosper <aprosper@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/01 12:27:01 by aprosper          #+#    #+#             */
+/*   Updated: 2022/08/01 14:41:33 by aprosper         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 # include "push_swap.h"
-
-
 
 int main(int argc, char **argv)
 { 
@@ -20,7 +30,7 @@ int main(int argc, char **argv)
     // ft_check_duplicate_nbr(&array, &garbages);
     
 
-    // test(&array, &garbages); // PROBLèEME EN METTANT QUE DEUX éLéMENTS !!!
+    test(&array, &garbages); // PROBLèEME EN METTANT QUE DEUX éLéMENTS !!!
     // ft_small_sort(&array, &garbages);
 
 // swap_a EST FAUX !!! IL DOIT INVERSER LES DEUX PREMIERS !!! CHECKER AUSSI swap b !!!
